@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/8e551b8833.js" crossorigin="anonymous"></script>
+</head>
+
+<body>    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXJPE5HYPR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-KXJPE5HYPR');
+    </script>
+    <header class="getanyhelp">
+        <i class="fas fa-bars bars" id="bars"></i>
+        <i class="fas fa-times fa-2x" id="times"></i>
+        <div class="menu">
+            <div class="menu-items">
+                <nav>
+                    <ul>
+                        <li>About</li>
+                        <li>Our Expert</li>
+                        <li>Blog</li>
+                        <li>NewsLetter</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="title">
+            <h3>Get Any Help</h3>
+        </div>
+        <div class="donate-button">
+            <a href="https://www.paypal.me/PJain427">Donate</a>
+        </div>
+    </header>
+    <nav id="mobileMenu" class="mobile-menu">
+        <a href="#AboutUS">About</a>
+        <a href="#OurExperts">Our Experts</a>
+        <a href="#blogs">Blog</a>
+        <a href="#news">Newsletter</a>
+    </nav>
+    <script>
+        const bars = document.getElementById('bars');
+        const body=document.getElementsByTagName("body")
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        const menuBar = document.getElementById("bars");
+        const cutMenu=document.getElementById("times");
+        bars.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active')
+            if(mobileMenu.classList.contains('active'))
+            {
+                body[0].style.overflow="";
+                menuBar.style.display="none";
+                cutMenu.style.display="block";
+            }
+            else{
+                body[0].style.overflow="";
+            }
+
+        });
+        const links=mobileMenu.getElementsByTagName('a');
+        for(let i=0;i<links.length;i++)
+        {
+            links[i].addEventListener('click',function(){
+                mobileMenu.classList.remove('active');
+                menuBar.style.display="block";
+                cutMenu.style.display="none";
+                body[0].style.overflow="";
+
+            })
+        }
+        cutMenu.addEventListener('click',function(){
+            // mobileMenu.style.transition="all 0.3s linear";
+                mobileMenu.classList.remove('active');
+                body[0].style.overflow="";
+                menuBar.style.display="block";
+                cutMenu.style.display="none";
+                });
+
+    </script>
+    <div class="Intro-Area">
+        <div class="upper-section">
+            <p class="showpin" >Connect with any Expert(Certified) with 1-click for free</p>
+        </div>
+        <div class="lower-section">
+            <div class="whatsappButton">
+                <div class="whatsappButton1">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <a href="https://wa.link/zosxot/" id="link" style="text-decoration: none;">MEDICAL</a>
+                </div>
+                <div class="whatsappButton2">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <a href="https://wa.link/3f12ph/" id="link" style="text-decoration: none;">SPIRTUAL </a>
+                </div>
+                <div class="whatsappButton3">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <a href="https://wa.link/vfv4w0/" id="link"  style="text-decoration: none;">CARRIER</a>
+                </div>
+                <div class="whatsappButton4">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                    <a href="https://wa.link/134kvm/" id="link" style="text-decoration: none;
+                    margin-top:0px;
+                    font-size:16px;
+                    padding-left:3px;">MENTAL-HEALTH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line" style="margin-top: -70px;"></div>
+    <div class="AboutUS" id="AboutUS">
+        <h3 id="About" style="color: black;">About us</h3>
+        <div class="information">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint suscipit eaque dignissimos neque, adipisci
+                animi a repellat sequi repellendus repudiandae nihil quasi cupiditate, ipsum sunt placeat, ipsa odio
+                deleniti aliquid.</p>
+        </div>
+        <div class="whatweAre">
+            <span class="fun">1000+ Student helped</span>
+            <span class="fun">100+ hours Spent</span>
+            <span class="fun">10 Experts</span>
+            <span class="fun">$10,000+ Raised</span>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="OurExperts" id="OurExperts">
+        <h3 id="subtitle" style="color: black;">
+            Our Experts
+        </h3>
+        <div class="section-container">
+            <div class="columns image" style="background-image:url('Images/Anurag\ Asim.jpg')">
+                &nbsp;
+            </div>
+            <div class="columns content">
+                <div class="content-container">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout.<a href="/ourexpert.html" style="color:black">read more</a>
+                    </p>
+                    <a href="https://wa.link/zosxot/" style="text-decoration: none;color:black">&#x2192 Chat for medical
+                        help</a>
+                </div>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="columns content">
+                <div class="content-container">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout.<a href="/ourexpert.html" style="color:black">read more</a>
+                    </p>
+                    <a href="https://wa.link/3f12ph/" style="text-decoration: none;color:black"> &#x2192 Chat for
+                        Spiritual help</a>
+                </div>
+            </div>
+            <div class="columns image" style="background-image:url('Images/Devang.jpg')">
+                &nbsp;
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="columns image" style="background-image:url('Images/piyushJ.jpg')">
+                &nbsp;
+            </div>
+            <div class="columns content">
+                <div class="content-container">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout.<a href="/ourexpert.html" style="color:black">read more</a>
+                    </p>
+                    <a href="https://wa.link/vfv4w0/" style="text-decoration: none;color:black">&#x2192 Chat for career
+                        help</a>
+                </div>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="columns content">
+                <div class="content-container">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout.<a href="/ourexpert.html" style="color:black">read more</a>
+                    </p>
+                    <a href="https://wa.link/134kvm/" style="text-decoration: none;
+                  color:black">&#x2192 Chat for Mental-health help</a>
+                </div>
+            </div>
+            <div class="columns image" style="background-image:url('Images/piyushJ.jpg')">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="blogs" id="blogs">
+       <div class="blog-heading">
+        <span class="main-heading">Blogs</span>
+       </div>
+       <div class="section-container" style="margin-top: 15px;">
+        <div class="columns image" style="background-image:url('Images/firstExpert.jpg')">
+            &nbsp;
+        </div>
+        <div class="columns content">
+            <div class="content-container">
+                <p>
+                    This is a testing blog that tests the website to our main website proper and a good blog will be released soon.
+                    <a href="https://blog.getanyhelp.org/welcome-to-get-any-help-blogs/" style="color: black;">Read more</a>
+                </p>
+            </div>
+        </div>
+       </div>
+       <a href="https://blog.getanyhelp.org/" class="sub-heading">All Blogs &#x2192</a>
+    </div>
+    <div class="line"></div>
+     <div class="NewsLetter" id="news">
+        <h3 class="fun">Newsletter</h3>
+        <div class="newsLetter-input">
+            <div class="name-section">
+              <input type="text" name="name" autocomplete="off" placeholder="name" required class="textBox"/>
+            </div>
+            <div class="email-section">
+                <input type="email" id="ema" name="email" autocomplete="off" placeholder="email" required class="emailBox"/>
+            </div>
+            <div class="submit-section">
+                <button type="submit" id="join">Subsribe</button>
+            </div>
+            <script>
+                let email=document.getElementById("ema");
+                document.getElementById("join").onclick = () => {
+                console.log(email.value)
+                fetch("/sendemail?email=" + email.value, {
+                    method: "POST"
+                }).then((res) => {
+                    // success
+                    alert("success")
+                }).catch((err) => {
+                    // error 
+                    alert(err)
+                })
+            }
+            </script>
+        </div>
+    </div> 
+    <footer>
+            <div class="parent-col" style="padding-top: 10px; padding-left: 10px;">
+                <div class="col col1" >
+                        <a href="/privacy-policy.html" style="text-decoration: none;">privacy policy</a>
+                        <a href="/Whatsapp-policy.html" style="text-decoration: none;">Whatsapp policy</a>
+                        <a href="/Cookie-policy.html" style="text-decoration: none;">Cookie policy</a>
+                        <a href="/work-with-us.html" style="text-decoration: none;">Work with us</a>
+                        <p style="color:white;
+                        margin-top: 0px;">free help take atmost 24 hours</p>
+                    
+                </div>
+                <div class="col col2">
+                    <ul id=footer-list>
+                        <li>USA</li>
+                        <li>Western coast</li>
+                        <li>India</li>
+                        <li>A-14 Mansaram Park</li>
+                        <li>Spain</li>
+                        <li>A-5, madrid</li>
+                        <li>Nigeria</li>
+                        <li>b-14,Col-4 funs Area</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="bottom">
+            <p style="margin-top:-5px">Copyright © 2022 Get Any Help AB. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
