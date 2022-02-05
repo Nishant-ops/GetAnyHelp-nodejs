@@ -234,12 +234,13 @@
                 fetch("/sendemail?email=" + email.value, {
                     method: "POST"
                 }).then((res) => {
-                    // success
-                    alert("success")
+                    alert("Thank For Subsribing our Newsletter")
+                    email.value="";
                 }).catch((err) => {
                     // error 
                     alert(err)
                 })
+                
             }
             </script>
         </div>
@@ -247,7 +248,7 @@
     <footer>
             <div class="parent-col" style="padding-top: 10px; padding-left: 10px;">
                 <div class="col col1" >
-                        <a href="html/Privacy-policy.html" style="text-decoration: none;">privacy policy</a>
+                        <a href="html/Privacy-policy.html" target="_blank" style="text-decoration: none;">privacy policy</a>
                         <a href="html/Whatsapp-policy.html" style="text-decoration: none;">Whatsapp policy</a>
                         <a href="html/Cookie-policy.html" style="text-decoration: none;">Cookie policy</a>
                         <a href="html/Work-with-us.html" style="text-decoration: none;">Work with us</a>
