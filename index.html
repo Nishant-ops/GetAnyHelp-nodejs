@@ -228,21 +228,23 @@
             <div class="submit-section">
                 <button type="submit" id="join">Subsribe</button>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
             <script>
-                let email=document.getElementById("ema");
-                document.getElementById("join").onclick = () => {
-                console.log(email.value)
-                fetch("/sendemail?email=" + email.value, {
-                    method: "POST"
-                }).then((res) => {
-                    alert("Thank For Subsribing our Newsletter")
-                    email.value="";
-                }).catch((err) => {
-                    // error 
-                    alert(err)
-                })
+               let button=document.querySelector("button");
+               button.addEventListener('click',async function(e)
+               {
+                  let name=document.querySelector("input[type='text']").value;
+                  let email=document.querySelector("input[type='email']").value;
+                  let response=await axios.post('/sendemail',{name,email});
+                  if(response.status==200)
+                  {
+                      alert("Thank you for subsribing our newletter")
+                  }
+                  else{
+                      alert("Something went wrong please try again")
+                  }
+               })
                 
-            }
             </script>
         </div>
     </div> 
