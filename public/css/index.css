@@ -31,6 +31,11 @@ display: block;
   background-repeat:no-repeat;
   background-size:cover;
 }
+.name-email{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
 .upper-section{
   margin-top: 410px;
   font-size: 40px;
@@ -287,6 +292,7 @@ justify-content: flex-start;
    outline: none;
    background: none;
    padding:10px;
+   width:120px
 
  }
  .name-section label{
@@ -296,9 +302,7 @@ justify-content: flex-start;
    cursor: text;
    transition:top 200ms ease-in,left 200ms, font-size 200ms;
  }
- .email-section{
-   margin-top: 20px;
- }
+
  .email-section label{
    position: absolute;
    top:4.4rem;
