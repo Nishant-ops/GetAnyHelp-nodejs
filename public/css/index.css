@@ -58,7 +58,7 @@ nav ul li{
 }
 .title{
 color: white;
-font-size: 18px;
+font-size: 20px;
 margin: 0px;
 padding: 10px 10px 10px 10px;
 text-align: center;
@@ -126,7 +126,7 @@ border-radius: 12px;
 .fun{
   display: block;
   text-align: center;
-  margin-top:30px;
+  margin-top:10px;
   font-size: 20px;
 }
 .fab{
