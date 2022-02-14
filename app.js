@@ -1,12 +1,28 @@
 const express = require('express'); 
 const SibApiV3Sdk = require('sib-api-v3-sdk');
+const multer=require('multer');
+const blogModel=require("./Model/blogModel")
 const app = express(); 
 require("dotenv").config();
 app.use(express.urlencoded({extended:true})); 
 app.use(express.json());
 app.use(express.static("public"));
+app.use(express.static("uploads"));
+const storage=multer.diskStorage({
+    destination:function(req,file,cb)
+    {
+     cb(null,'./uploads/');
+    },
+    filename:function(req,file,cb)
+    {
+      cb(null,file.originalname);
+    }
+});
+
+const upload=multer({storage:storage});
+
 // send email endpoint
-app.post("/sendemail", (req, res, next) => {
+app.post("/newsletter", (req, res, next) => {
     const email = req.body.email; 
     let apikey = process.env.SIB_API_KEY 
     // auth + setup
@@ -35,7 +51,33 @@ app.post("/sendemail", (req, res, next) => {
         res.send("failure");
     })
 })
-
+app.get("/sendBlog",async function(req,res)
+{
+  const obj=await blogModel.find();
+  res.json({
+      body:obj,
+  })
+});
+app.post("/sendBlog",upload.single('image'),async function(req,res,next)
+{
+  console.log(req.body);
+  console.log(req.file);
+  const blog={
+      authorName:req.body.author,
+      title:req.body.title,
+      image:req.file.originalname,
+      paragraph:req.body.paragraph,
+      category:req.body.category,
+  } 
+  const obj=await blogModel.create(blog);
+  if(obj)
+  {
+      console.log(obj);
+  }
+  res.json({
+      message:"recived",
+  })
+});
 
 // frontend endpoint 
 app.use((req, res, next) => {

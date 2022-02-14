@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter a blog</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family:sans-serif;
+        }
+        h1{
+           margin-left:44%;
+        }
+        .Author-title-image{
+            display: flex;
+            justify-content: space-between;
+        }
+        .title{
+            display: flex;
+            align-items: center;
+        }
+        #title{
+            width:800px;
+            height:80px;
+            border-radius: 14px;
+            border:2px solid;
+            font-size:20px;
+        }
+        .blog-pararaph{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin-top:50px;
+        }
+        #paragarph{
+            width:95%;
+            height:350px;
+            border-radius:20px;
+            font-size: 15px;
+            padding: 5px;
+            border: 2px solid;
+        }
+        .blog-category{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin-top:10px;
+        }
+        button{
+            margin-left:750px;
+            margin-top:20px;
+            height:30px;
+            border-radius: 10px;
+            border:2px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter a blog</h1>
+    <div class="Author-title-image">
+        <div class="Author">
+            <label for="author">Author Name:</label>
+            <input type="text" name="author" id="author">
+        </div>
+        <div class="title">
+            <label for="title">Blog title:</label>
+            <textarea name="Title" id="title" placeholder="Enter a Blog title"></textarea>
+        </div>
+        <div class="image">
+            <label for="image">blog image:</label>
+           <input type="file" name="image" id="image">
+        </div>
+    </div>
+    <div class="blog-pararaph">
+        <span>Blog paragraph</span>
+        <textarea name="paragraph" id="paragarph" placeholder="Enter a blog paragraph"></textarea>
+    </div>
+    <div class="blog-category">
+        <span>Blog Category: </span>
+        <select name="category" id="category">
+            <option value="--select--">--Select--</option>
+            <option value="General">General</option>
+            <option value="Medical">Medical</option>
+            <option value="Spirtual">Spirtual</option>
+            <option value="Carrier">Carrier</option>
+            <option value="MENTAL-HEALTH">Mental-health</option>
+        </select>
+    </div>
+    <button type="submit" id="fun"> Submit blog</button>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const Auhtor=document.getElementById('author');
+    const Title=document.getElementById('title');
+    const Image=document.getElementById('image');
+    const Paragarph=document.getElementById('paragarph');
+    const ddl=document.getElementById('category');
+    document.getElementById('fun').addEventListener('click',async function(e){
+        const author=Auhtor.value;
+        const title=Title.value;
+        const image=Image.files[0];
+        console.log(Image.files[0]);
+        const paragarph=Paragarph.value;
+        const category=ddl.value;
+        const blog=new FormData()
+        console.log(Image.files);
+        blog.append('author',Auhtor.value);
+        blog.append('title',title);
+        blog.append('image',image);
+        blog.append('paragraph',paragarph);
+        blog.append('category',category);
+        const response = await axios({
+    method: 'post',
+    url: '/sendBlog',
+    data: blog,
+    headers: {
+        'Content-Type': `multipart/form-data;`,
+    },
+});
+    });
+</script>
+</html>
