@@ -6,7 +6,7 @@ const app = express();
 require("dotenv").config();
 app.use(express.urlencoded({extended:true})); 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("public/build"));
 app.use(express.static("uploads"));
 const storage=multer.diskStorage({
     destination:function(req,file,cb)
@@ -20,7 +20,7 @@ const storage=multer.diskStorage({
 });
 
 const upload=multer({storage:storage});
-
+let read;
 // send email endpoint
 app.post("/newsletter", (req, res, next) => {
     const email = req.body.email; 
@@ -51,9 +51,32 @@ app.post("/newsletter", (req, res, next) => {
         res.send("failure");
     })
 })
+app.get("/sendBlog/:id",async function(req,res)
+{ 
+  const obj=await blogModel.findById(req.params.id);
+  res.json({
+      body:obj,
+  })
+});
+app.post("/send",function(req,res)
+{
+  console.log(req.body.content);
+  read=req.body;
+  
+  res.json({
+      message:read,
+  })
+});
+app.get("/read",async function(req,res)
+{
+   const obj=await blogModel.find();
+    res.json({
+        body:obj,
+    })
+})
 app.get("/sendBlog",async function(req,res)
 {
-  const obj=await blogModel.find();
+  let obj=await blogModel.find();
   res.json({
       body:obj,
   })
@@ -69,7 +92,7 @@ app.post("/sendBlog",upload.single('image'),async function(req,res,next)
       paragraph:req.body.paragraph,
       category:req.body.category,
   } 
-  const obj=await blogModel.create(blog);
+   const obj=await blogModel.create(blog);
   if(obj)
   {
       console.log(obj);
@@ -79,10 +102,7 @@ app.post("/sendBlog",upload.single('image'),async function(req,res,next)
   })
 });
 
-// frontend endpoint 
-app.use((req, res, next) => {
-    res.sendFile(__dirname + "/index.html");
-})
+
 
 //To make listen to different port
 app.listen(process.env.PORT||5000);
