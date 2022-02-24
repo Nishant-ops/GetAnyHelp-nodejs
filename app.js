@@ -7,7 +7,7 @@ const app = express();
 require("dotenv").config();
 app.use(express.urlencoded({extended:true})); 
 app.use(express.json());
-app.use(express.static(path.join(__dirname,"public/build")));
+app.use(express.static(path.join(__dirname,"build")));
 app.use(express.static("uploads"));
 const storage=multer.diskStorage({
     destination:function(req,file,cb)
