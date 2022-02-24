@@ -1,4 +1,5 @@
 const express = require('express'); 
+const path=require('path');
 const SibApiV3Sdk = require('sib-api-v3-sdk');
 const multer=require('multer');
 const blogModel=require("./Model/blogModel")
@@ -103,6 +104,8 @@ app.post("/sendBlog",upload.single('image'),async function(req,res,next)
 });
 
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../GetAnyHelp--nodejs/public/build', 'index.html'));
+ });
 //To make listen to different port
 app.listen(process.env.PORT||5000);
