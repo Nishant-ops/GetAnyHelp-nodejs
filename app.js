@@ -7,7 +7,7 @@ const app = express();
 require("dotenv").config();
 app.use(express.urlencoded({extended:true})); 
 app.use(express.json());
-app.use(express.static(path.join(__dirname,"build")));
+app.use(express.static("public/build"));
 app.use(express.static("uploads"));
 const storage=multer.diskStorage({
     destination:function(req,file,cb)
@@ -104,8 +104,6 @@ app.post("/sendBlog",upload.single('image'),async function(req,res,next)
 });
 
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build/index.html'));
- });
+
 //To make listen to different port
 app.listen(process.env.PORT||5000);
