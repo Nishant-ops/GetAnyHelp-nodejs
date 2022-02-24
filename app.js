@@ -105,7 +105,7 @@ app.post("/sendBlog",upload.single('image'),async function(req,res,next)
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../', 'index.html'));
  });
 //To make listen to different port
 app.listen(process.env.PORT||5000);
