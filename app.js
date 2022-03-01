@@ -59,6 +59,7 @@ app.get("/sendBlog/:id",async function(req,res)
       body:obj,
   })
 });
+
 app.post("/send",function(req,res)
 {
   console.log(req.body.content);
@@ -77,7 +78,10 @@ app.get("/read",async function(req,res)
 })
 app.get("/sendBlog",async function(req,res)
 {
-  let obj=await blogModel.find();
+    let obj;
+    // console.log(req.query.category)
+  obj=await blogModel.find();
+
   res.json({
       body:obj,
   })
@@ -102,7 +106,15 @@ app.post("/sendBlog",upload.single('image'),async function(req,res,next)
       message:"recived",
   })
 });
-
+app.get("/send",async function(req,res)
+{
+   
+    let c=req.query.category.toString();
+let obj=await blogModel.find({category:c})
+  res.json({
+      body:obj,
+  })
+});
 app.get('*',(req,res)=>{
 res.sendFile(path.join(__dirname,'public/build/index.html'))
 });
