@@ -59,7 +59,13 @@ app.get("/sendBlog/:id",async function(req,res)
       body:obj,
   })
 });
-
+app.get("/sendoneblog", async function(req,res)
+{
+  const obj=await blogModel.findOne();
+  res.json({
+      body:obj,
+  })
+});
 app.post("/send",function(req,res)
 {
   console.log(req.body.content);
