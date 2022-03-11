@@ -1,12 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8e551b8833.js" crossorigin="anonymous"></script>
+    <title>Expert</title>
+    <style>
+        .image-section{
+            /* background-image: url("AnuragAsim.jpg"); */
+            height:100px;
+            width:40vw;
+            margin-left: 28vw;
+            margin-right: 30vw;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+#footer-list{
+  list-style: none;
+  margin-top: 0px;
+  margin-left: -30px;
+}
+.parent-col{
+display: flex;
+justify-content: flex-start;
+}
+
+.column{
+    padding: 0px;
+}
+.col1{
+  width: 50%;
+}
+.col2{
+  width: 45%;
+}
+#copyright{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #FFF;
+  padding-right:14vw;
+  display: block;
+ }
+        header{
+background-color:black;
+display: flex;
+height:12%;
+align-items: center;
+color:white;
+position: fixed;
+top:0;
+width:100%;
+z-index: 99;
+}
+        *{
+box-sizing: border-box;
+}
+
+body,html{
+    width:100%;
+    height:100%;
+    margin:0px;
+    font-family: Helvetica;
+}
+#Experts{
+    margin-top: 12vh;
+    margin-left:43vw;
+}
+#Heading{
+    margin-left:45vw;
+}
+#Heading-mental{
+    margin-left:43vw;
+}
+#info{
+    margin-left:3vw;
+    margin-right:3vw;
+    width:94vw;
+}
+.donate-button{
+display: flex;
+justify-content: center;
+align-items: center;
+height:55%;
+width:90px;
+margin-left:auto;
+background: #00684d;
+margin-right:5px;
+text-align: center;
+border-radius: 12px;
+}
+.donate-button a{
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  color:white;
+}
+.header-title{
+    margin-left: 32rem;
+    font-size: 2rem;
+}
+.header-title a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+@media only screen and (max-width:359px){
+    
+    footer{
+          margin-top:30px;
+        }
+        .parent-col a{
+          display: block;
+          color:white;
+        }
+        #copyright{
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 17px;
+          letter-spacing: 0;
+          padding-left: 20px;
+        }
+
+    .header-title{
+        margin-left: 6.5rem;
+        font-size: 1.1rem;
+    }
+    .header-title a{
+        color:white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #Experts{
+        margin-left:35vw;
+    }
+    #Heading{
+        margin-left: 40vw;
+    }
+    #Heading-mental{
+        margin-left: 33vw;
+    }
+    .image-section{
+        margin-left:30vw;
+    }
+}
+
+@media only screen and (min-width:400px) and (max-width:500px){
+    
+    .header-title{
+        margin-left: 7.3rem;
+        font-size: 1.6rem;
+    }
+    .header-title a{
+        color:white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #Experts{
+        margin-left:35vw;
+    }
+    #Heading{
+        margin-left: 40vw;
+    }
+    #Heading-mental{
+        margin-left: 33vw;
+    }
+    .image-section{
+        margin-left:30vw;
+    }
+}
+@media only screen and (min-width:360px) and (max-width:399px){
+    
+    .header-title{
+        margin-left: 7.3rem;
+        font-size: 1.3rem;
+    }
+    .header-title a{
+        color:white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #Experts{
+        margin-left:35vw;
+    }
+    #Heading{
+        margin-left: 40vw;
+    }
+    #Heading-mental{
+        margin-left: 33vw;
+    }
+    .image-section{
+        margin-left:30vw;
+    }
+}
+    </style>
 </head>
+
 <body>
-    <h1> Experts </h1>
-</body>
+    <header class="getanyhelp">
+        <div class="header-title">
+            <a href="https://www.getanyhelp.org/">Get Any Help</a>
+        </div>
+        <div class="donate-button">
+            <a href="https://www.paypal.me/PJain427">Donate</a>
+        </div>
+    </header>
+    <h1 id="Experts" > Experts </h1>
+    <h3 id="Heading" >Medical</h3>
+    <div class="image-section" style="background-image: url(./AnuragAsim.jpg);">&nbsp;</div>
+    <p id="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nam ipsam ad dolore veritatis porro non quasi
+        repellendus perferendis laboriosam, ratione sunt omnis dicta maiores quaerat obcaecati voluptatum, error
+        nostrum.
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione accusantium dignissimos debitis earum dolore
+        quas at magni dicta blanditiis, vel veritatis a quisquam eum minus eius! Ducimus reprehenderit optio iure.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis quo, ex blanditiis voluptatem cumque. Sint
+        modi facere, impedit hic sunt ut iusto deleniti officiis minima totam suscipit voluptatibus ipsam.</p>
+        <h3 id="Heading" >Spirtual</h3>
+        <div class="image-section" style="background-image: url(./Devang.jpg);">&nbsp;</div>
+    <p id="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nam ipsam ad dolore veritatis porro non quasi
+       repellendus perferendis laboriosam, ratione sunt omnis dicta maiores quaerat obcaecati voluptatum, error
+       nostrum.
+    
+       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione accusantium dignissimos debitis earum dolore
+       quas at magni dicta blanditiis, vel veritatis a quisquam eum minus eius! Ducimus reprehenderit optio iure.
+    
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis quo, ex blanditiis voluptatem cumque. Sint
+       modi facere, impedit hic sunt ut iusto deleniti officiis minima totam suscipit voluptatibus ipsam.</p>
+       <h3 id="Heading" >Carrier</h3>
+       <div class="image-section" style="background-image: url(./piyushJ.jpg);">&nbsp;</div>
+    <p id="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nam ipsam ad dolore veritatis porro non quasi
+        repellendus perferendis laboriosam, ratione sunt omnis dicta maiores quaerat obcaecati voluptatum, error
+        nostrum.
+        
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione accusantium dignissimos debitis earum dolore
+                quas at magni dicta blanditiis, vel veritatis a quisquam eum minus eius! Ducimus reprehenderit optio iure.
+        
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis quo, ex blanditiis voluptatem cumque. Sint
+                modi facere, impedit hic sunt ut iusto deleniti officiis minima totam suscipit voluptatibus ipsam.</p>
+                <h3 id="Heading-mental">Mental-Health</h3>
+                <div class="image-section" style="background-image: url(./piyushJ.jpg);">&nbsp;</div>
+                <p id="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nam ipsam ad dolore veritatis porro non quasi
+                    repellendus perferendis laboriosam, ratione sunt omnis dicta maiores quaerat obcaecati voluptatum, error
+                    nostrum.
+            
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione accusantium dignissimos debitis earum dolore
+                    quas at magni dicta blanditiis, vel veritatis a quisquam eum minus eius! Ducimus reprehenderit optio iure.
+            
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis quo, ex blanditiis voluptatem cumque. Sint
+                    modi facere, impedit hic sunt ut iusto deleniti officiis minima totam suscipit voluptatibus ipsam.</p>
+</body> <footer id="footer">
+    <div class="parent-col" >
+        <div class="col col1" >
+                <a href="PrivacyPolicy.html" target="_blank" style="text-decoration: none;
+                color:white;">privacy policy</a>
+                <p id="fun">free help take atmost 24 hours</p>
+            
+        </div>
+        <div class="col col2">
+            <ul id='footer-list'>
+                <li>USA</li>
+                <li>Western coast</li>
+                <li>India</li>
+                <li>A-14 Mansaram Park</li>
+                <li>Spain</li>
+                <li>A-5, madrid</li>
+                <li>Nigeria</li>
+                <li>b-14,Col-4 funs Area</li>
+            </ul>
+        </div>
+    </div>
+<div className="bottom">
+    <p>Copyright © 2022 Get Any Help AB. All rights reserved.</p>
+</div>
+</footer>
+
 </html>
